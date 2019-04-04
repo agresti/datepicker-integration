@@ -1,10 +1,10 @@
 body {
-	 font-family: sans-serif;
-	 font-size: 1em;
+	font-family: sans-serif;
+	font-size: 1em;
 }
 ul {
 	width: 40%;
-    float: left;
+    	float: left;
 }
 main {
 
@@ -17,8 +17,8 @@ ul {
 }
 .event-nav {
 	float: right;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    	margin-top: 20px;
+    	margin-bottom: 10px;
 }
 #event-statistic {
 	background: #d0e9ff61;
@@ -30,7 +30,7 @@ ul {
 	left: 75%;
 	position: absolute;
 	padding-left: 15px;
-    padding-right: 15px;
+    	padding-right: 15px;
 }
 .col-left {
 	right: 25%;
@@ -38,24 +38,24 @@ ul {
 	float: left;
 	position: absolute;
 	padding-left: 15px;
-    padding-right: 15px;
+    	padding-right: 15px;
 }
 .button {
 	background-color: #fbfbfb;
-    border: none;
-    color: #060606;
-    padding: 16px 29px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
+    	border: none;
+    	color: #060606;
+    	padding: 16px 29px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 2px;
+    	-webkit-transition-duration: 0.4s;
+    	transition-duration: 0.4s;
+    	cursor: pointer;
 }
 .button:hover {
-    background-color: #375f82;
+    	background-color: #375f82;
   	color: white;
 }
 .week-on-click {
@@ -63,10 +63,10 @@ ul {
 }
 .container {
 	position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    width: 65%;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	margin: 0 auto;
+    	width: 65%;
 }
 .dateValOnSelect {
 	position: absolute;
@@ -156,9 +156,8 @@ ul {
 	 font-weight: bold;
 }
  .ui-state-active {
-	/*color: #a94242;*/
 	color: #fff6f6;
-    background: #ff7800;
+    	background: #ff7800;
 }
  .ui-datepicker-unselectable .ui-state-default {
 	color: #eee;
