@@ -1,112 +1,78 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8"/>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="styles.css">.
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="script.js" type="text/javascript"></script>
+  <title>Calendar of Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- jQuery & jQuery UI -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
+  <main class="page-wrapper" role="main">
+    <div class="container">
+      
+      <!-- Sidebar: Calendar + Buttons -->
+      <div class="col-right">
+        <aside class="sidebar" aria-label="Date selector and filters">
+          <div id="datepicker" aria-label="Calendar datepicker"></div>
+          <div id="buttons-side">
+            <button class="button" id="by-day" aria-label="Filter events by day">Day</button>
+            <button class="button" id="by-week" aria-label="Filter events by week">Week</button>
+            <button class="button" id="by-month" aria-label="Filter events by month">Month</button>
+          </div>
+        </aside>
+      </div>
 
-<main class="page-wrapper">
-	<div class="container">
-		<div class="col-right">
-			<aside class="sidebar">
-				<div id="datepicker"></div>
-				<div id="buttons-side">
-					<button class="button" id="by-day">Day</button>
-					<button class="button" id="by-week">Week</button>
-					<button class="button" id="by-month">Month</button>
-				</div>
-			</aside>
-		</div> 
-		<div class="col-left">
-			<h1>Calendar of Events</h1>
-			<h2 id="sub-header">All Events</h2>
-			<p id="event-statistic">Showing <b><span id="result">X</span></b> results based on the date of <b><span id="date">X, 2019</span></b> using filter mode <b><span id="mode">X</span></b></p>
+      <!-- Main content -->
+      <div class="col-left">
+        <h1>Calendar of Events</h1>
+        <p>This interactive calendar project was built using HTML, CSS, and jQuery UI. You can filter opera events by day, week, or month.</p>
 
-<ul class="unstyled" data-end="1643043574865" data-limit="50" data-link="site://Calendar-TTC/holidays" data-start="1548306034865" data-summary="" data-timestamp="1548351154865" data-title="U.S. Holidays" data-type="events">
+        <h2 id="sub-header">All Events</h2>
+        <p id="event-statistic" aria-live="polite">
+          Showing <b><span id="result">X</span></b> results based on the date of 
+          <b><span id="date">X, 2019</span></b> using filter mode 
+          <b><span id="mode">X</span></b>
+        </p>
 
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Fri, February 01, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/Adriana-Lecouvreur/" target="_parent">Adriana Lecouvreur</a>
-	</li>
+        <!-- Event List -->
+        <ul class="unstyled">
+          <li><em class="eventDate">Fri, February 01, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/Adriana-Lecouvreur/" target="_blank">Adriana Lecouvreur</a></li>
+          <li><em class="eventDate">Mon, February 04, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/aida/" target="_blank">Aida</a></li>
+          <li><em class="eventDate">Sun, February 17, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/la-boheme/" target="_blank">La Bohème</a></li>
+          <li><em class="eventDate">Mon, February 18, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/carmen/" target="_blank">Carmen</a></li>
+          <li><em class="eventDate">Tue, February 19, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/la-clemenza-di-tito/" target="_blank">La Clemenza di Tito</a></li>
+          <li><em class="eventDate">Wed, February 20, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/dialogues-des-carmelites/" target="_blank">Dialogues des Carmélites</a></li>
+          <li><em class="eventDate">Thu, February 21, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/don-giovanni/" target="_blank">Don Giovanni</a></li>
+          <li><em class="eventDate">Fri, February 22, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/falstaff/" target="_blank">Falstaff</a></li>
+          <li><em class="eventDate">Fri, February 22, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/la-fanciulla-del-west/" target="_blank">La Fanciulla del West</a></li>
+          <li><em class="eventDate">Sat, February 23, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/the-magic-flute/" target="_blank">The Magic Flute</a></li>
+          <li><em class="eventDate">Sat, February 23, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/la-traviata/" target="_blank">La Traviata</a></li>
+          <li><em class="eventDate">Thu, February 28, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/il-trittico/" target="_blank">Il Trittico</a></li>
+          <li><em class="eventDate">Wed, March 20, 2019</em> <a href="https://www.metopera.org/season/2018-19-season/die-walkure/" target="_blank">Die Walküre</a></li>
+        </ul>
 
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Mon, February 04, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/aida/" target="_parent">Aida</a>
-	</li>
+        <div class="dateValOnSelect"></div>
+      </div>
+    </div>
+  </main>
 
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Sun, February 17, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/la-boheme/" target="_parent">La Bohème</a>
-	</li>
+  <!-- Optional footer -->
+  <footer style="margin-top: 40px; font-size: 0.9em; text-align: center;">
+    <p>Built by Ella | HTML, CSS, jQuery UI | <a href="https://github.com/agresti.io" target="_blank">GitHub</a></p>
+  </footer>
 
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Mon, February 18, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/carmen/" target="_parent">Carmen</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Tue, February 19, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/la-clemenza-di-tito/" target="_parent">La Clemenza di Tito</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Wed, February 20, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/dialogues-des-carmelites/" target="_parent">Dialogues des Carmélites</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Thu, February 21, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/don-giovanni/" target="_parent">Don Giovanni</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Fri, February 22, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/falstaff/" target="_parent">Falstaff</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Fri, February 22, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/la-fanciulla-del-west/" target="_parent">La Fanciulla del West</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Sat, February 23, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/the-magic-flute/" target="_parent">The Magic Flute</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Sat, February 23, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/la-traviata/" target="_parent">La Traviata</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Thu, February 28, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/il-trittico/" target="_parent">Il Trittico</a>
-	</li>
-
-	<li data-timestamp="1550466000000" data-categories="" data-guid="" class="">
-		<em class="col-md-3 muted eventDate">Wed, March 20, 2019</em>
-		<a class="col-md-4" href="https://www.metopera.org/season/2018-19-season/die-walkure/" target="_parent">Die Walküre</a>
-	</li>
-</ul>
-
-		<div class="dateValOnSelect"></div>
-		<!--<div class="timeStampOnSelect"></div>
-		<span id="startDate"></span>
-		<span id="endDate"></span>-->
-
-		</div> 
-	</div>
-</main>
-
+  <!-- Your Script -->
+  <script src="script.js" type="text/javascript" defer></script>
 </body>
+
 </html>
+
